@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Della+Respira&display=swap");
+.nav {
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+}
+
+.logo {
+  font-family: "Della Respira", serif;
+  text-transform: lowercase;
+}
+
+.experiences {
+  color: white;
+  font-weight: 600;
+  margin-right: 10px;
+  position: relative;
+  padding: 10px 0px;
+}
+
+.experiences::after {
+  content: "";
+  width: 5px;
+  height: 2px;
+  border-radius: 10px;
+  position: absolute;
+  background-color: rgb(255, 67, 99);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto !important;
+  transition: all 0.2s;
+}
+
+.experiences:hover {
+  color: rgb(255, 67, 99);
+}
+
+.experiences:hover::after {
+  width: 10px;
+  transition: all 0.2s;
+}
+
+.sign__in__btn {
+  color: white;
+  border: 2px solid white;
+  padding: 8px 15px;
+  border-radius: 999px;
+  font-weight: 600;
+  position: relative;
+}
+
+.sign__in__btn:hover {
+  background-color: rgb(255, 67, 99);
+  color: white;
+  border-color: rgb(255, 67, 99);
+}
+
+.head__bg {
+  /* background: linear-gradient(top, #c9dbe9 0%, #fff 100%); */
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+  position: relative;
+  padding-bottom: 120px;
+  margin-bottom: 80px;
+}
+
+.launch__tab,
+.bus__tab,
+.train__tab,
+.flight__tab {
+  padding: 10px;
+  position: relative !important;
+  background-color: white;
+  border-radius: 100%;
+  margin: 0px 5px;
+  transition: all 0.8s !important;
+  transform: rotate(45deg);
+  z-index: 2 !important;
+}
+
+.launch__logo,
+.bus__logo,
+.train__logo,
+.flight__logo {
+  transform: rotate(-45deg) scale(0.8) !important;
+}
+
+.self__active {
+  filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.8));
+}
+
+.self__active.launch__tab,
+.self__active.bus__tab,
+.self__active.train__tab,
+.self__active.flight__tab {
+  border-radius: 100% 100% 10px 100%;
+  border-bottom-right-radius: 10px !important;
+}
+
+.tab__contents {
+  padding: 5px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background-color: white;
+  margin-top: 15px;
+  width: 90vw;
+  max-width: 1000px;
+  position: relative;
+  box-shadow: 0px 4px 20px -5px #005ef5;
+  /* box-shadow: 0px 4px 20px -12px rgba(0, 0, 0, 0.7); */
+}
+
+#from,
+#to {
+  background-color: rgb(248, 248, 248) !important;
+  border-radius: 5px;
+  width: 220px;
+  height: 230px;
+  box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.5);
+  z-index: 99 !important;
+  position: absolute !important;
+  overflow-y: scroll;
+  display: none;
+  z-index: 999;
+  transition: all 0.3s;
+}
+
+#from::-webkit-scrollbar,
+#to::-webkit-scrollbar {
+  width: 0;
+}
+
+#from > div,
+#to > div {
+  position: relative !important;
+}
+
+#from > div > h1,
+#to > div > h1 {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  font-size: 13px;
+  font-weight: 700;
+  width: 100%;
+  padding: 5px 10px;
+  background-color: white;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+#from > div > ul > li,
+#to > div > ul > li {
+  padding: 5px 10px;
+  border-bottom: 1px solid lightgray;
+  cursor: pointer;
+  font-weight: 100;
+  font-size: 15px;
+  color: rgb(71, 71, 71);
+}
+
+#from > div > ul > li:hover,
+#to > div > ul > li:hover {
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+}
+
+#from__input,
+#to__input,
+#pass__input {
+  outline: none;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: transparent;
+  cursor: default;
+  display: flex;
+  width: 100%;
+  color: black !important;
+  text-overflow: ellipsis;
+  overflow: visible;
+}
+
+#from__input::placeholder,
+#to__input::placeholder,
+#pass__input::placeholder {
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.from,
+.to,
+.passanger {
+  padding: 10px 20px;
+  border-radius: 999px;
+  flex: 0.85;
+}
+
+.dates1 {
+  flex: 1;
+}
+
+.dates {
+  flex: 2 !important;
+}
+
+.from:hover,
+.to:hover,
+.passanger:hover {
+  background-color: rgb(236, 236, 236);
+}
+
+.input__label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.header__title {
+  position: absolute;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.to__shine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 20px -15px rgb(0, 0, 0);
+}
+
+.to__shine > h1 {
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.to__shine > p {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(-20px);
+    height: 20px;
+  }
+  100% {
+    transform: translateY(0px);
+    height: 230px;
+  }
+}
+
+@keyframes self {
+  0% {
+    transform: translateY(-20px) rotate(45deg);
+    border-radius: 999px;
+  }
+
+  100% {
+    transform: translateY(0) rotate(45deg);
+  }
+}
